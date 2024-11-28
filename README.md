@@ -37,8 +37,6 @@ To train the model, run the following command in the terminal:
 python train.py
 ```
 
-The model will be trained on the PlantVillage dataset, and the training output, including logs and model checkpoints, can be found in the `output` folder.
-
 ## Evaluating
 
 To evaluate the model, run the following command in the terminal:
