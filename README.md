@@ -1,12 +1,12 @@
 # plant_diseases_recognition
 
-This project aims to develop a model for recognizing plant diseases using deep learning. The model is trained on the PlantVillage dataset, and it classifies different plant diseases based on images of leaves.
+This project aims to develop a model (CNN) for recognizing plant diseases using deep learning. The model is trained on the PlantVillage dataset, and it classifies different plant diseases based on images of leaves.
 
 ## Requirements
 
-- Python 3.x
+- Python 3.12.3
 - TensorFlow 2.17.0
-- Other dependencies can be installed via `requirements.txt`.
+- Poetry for dependency management.
 
 ## Installation
 
@@ -23,7 +23,7 @@ This project aims to develop a model for recognizing plant diseases using deep l
 
 3. Install the required Python dependencies:
    ```bash
-   pip install -r requirements.txt
+   poetry install
    ```
 
 ## Configuration
@@ -42,9 +42,10 @@ The model will be trained on the PlantVillage dataset, and the training output, 
 ## Output
 
 After training, you can find the following in the `output` folder:
-- Model weights
+- Checkpoints
 - Training logs
-- Any other generated files during training
+- Best model
+- Other Visualizations
 
 ## License
 
