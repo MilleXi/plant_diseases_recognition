@@ -55,9 +55,9 @@ python get_feature_maps.py
 
 You can find the pictures in the `output` folder.
 
-## Gradio Interface
+## Visual Interface
 
-To use the interface, run the following command in the terminal:
+To open the visual interface, run the following command in the terminal:
 ```bash
 python gradio_interface.py
 ```
