@@ -162,3 +162,4 @@ cython_debug/
 #.idea/
 
 Plantvillage-Dataset/
+Plant_leave_diseases_dataset_with_augmentation/

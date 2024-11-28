@@ -31,6 +31,7 @@ def get_predictions(model, data_generator):
     
     # 获取真实标签和类别名称
     true_classes = data_generator.classes
+    print(true_classes)
     class_names = list(data_generator.class_indices.keys())
     
     return true_classes, predicted_classes, class_names
@@ -84,12 +85,16 @@ def evaluate():
         logger.log(f"加权召回率: {weighted_recall:.4f}")
         logger.log(f"加权 F1 Score: {weighted_f1:.4f}")
         
-        # 混淆矩阵
+        # 生成混淆矩阵
         logger.log("[信息] 生成混淆矩阵...")
+        y_true, y_pred, class_names = get_predictions(model, valid_generator)
         confusion_matrix_path = os.path.join(vis_dir, 'confusion_matrix.png')
-        cm = confusion_matrix(y_true, y_pred)
-        Visualizer.plot_confusion_matrix(cm, class_names, confusion_matrix_path)
-        logger.log(f"[信息] 混淆矩阵已保存至: {confusion_matrix_path}")
+        Visualizer.plot_confusion_matrix(
+            y_true,
+            y_pred,
+            class_names,
+            confusion_matrix_path
+        )
         
         # 总体加权 F1 score
         overall_f1 = f1_score(y_true, y_pred, average='weighted')
