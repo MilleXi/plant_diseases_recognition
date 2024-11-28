@@ -1,9 +1,4 @@
 # plant_diseases_recognition
-Here’s a draft for the README based on the information you provided:
-
----
-
-# Plant Diseases Recognition
 
 This project aims to develop a model for recognizing plant diseases using deep learning. The model is trained on the PlantVillage dataset, and it classifies different plant diseases based on images of leaves.
 
