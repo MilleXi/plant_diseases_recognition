@@ -7,7 +7,7 @@ class Config:
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     
     # 数据相关配置
-    DATA_DIR = 'Plant_leave_diseases_dataset_with_augmentation'
+    DATA_DIR = 'Plantvillage-Dataset'
     IMG_SIZE = (128, 128)
     BATCH_SIZE = 32
     VALIDATION_SPLIT = 0.2

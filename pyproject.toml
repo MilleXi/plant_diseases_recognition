@@ -7,19 +7,15 @@ readme = "README.md"
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.12"
-torch = {version = "^2.5.0", source = "torch"}
+python = "^3.12.3"
 scikit-learn = "^1.5.2"
 unzip = "^1.0.0"
 numpy = "^2.1.3"
 seaborn = "^0.13.2"
 keras = "^3.6.0"
 opencv-python = "^4.10.0.84"
-
-[tool.poetry.group.dev.dependencies]
 matplotlib = "^3.9.2"
 pandas = "^2.2.3"
-ipykernel = "^6.29.5"
 
 [build-system]
 requires = ["poetry-core"]
@@ -29,8 +25,3 @@ build-backend = "poetry.core.masonry.api"
 name = "tsinghua"
 url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
 priority = "primary"
-
-[[tool.poetry.source]]
-name = "torch"
-url = "https://download.pytorch.org/whl/cu124"
-priority = "supplemental"

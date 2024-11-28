@@ -1,0 +1,58 @@
+[2024-11-28 11:57:25] [信息] TensorBoard日志目录: /home/fries/plant_diseases_recognition/output/logs/20241128-115725
+[2024-11-28 11:57:25] [信息] 可视化输出目录: /home/fries/plant_diseases_recognition/output/visualizations
+[2024-11-28 11:57:25] [信息] 使用 1 个计算设备进行训练
+[2024-11-28 11:57:25] [信息] 准备数据生成器...
+[2024-11-28 11:57:31] [信息] 构建模型...
+[2024-11-28 11:57:35] [信息] 开始训练模型...
+[2024-11-28 12:48:30] [信息] 最终模型已保存至: /home/fries/plant_diseases_recognition/output/models/final_model.keras
+[2024-11-28 12:48:30] [信息] 生成混淆矩阵...
+[2024-11-28 12:48:35] [信息] 混淆矩阵已保存至: /home/fries/plant_diseases_recognition/output/visualizations/confusion_matrix.png
+[2024-11-28 12:48:36] 
+训练总结:
+[2024-11-28 12:48:36] 最佳验证准确率: 0.9656
+[2024-11-28 12:48:36] 最佳训练准确率: 0.9941
+[2024-11-28 12:48:36] 最终验证损失: 0.1379
+[2024-11-28 12:48:36] 
+各类别准确率:
+[2024-11-28 12:48:36] .git: nan
+[2024-11-28 12:48:36] Apple___Apple_scab: 0.9603
+[2024-11-28 12:48:36] Apple___Black_rot: 1.0000
+[2024-11-28 12:48:36] Apple___Cedar_apple_rust: 1.0000
+[2024-11-28 12:48:36] Apple___healthy: 0.9939
+[2024-11-28 12:48:36] Blueberry___healthy: 0.9633
+[2024-11-28 12:48:36] Cherry_(including_sour)___Powdery_mildew: 0.9952
+[2024-11-28 12:48:36] Cherry_(including_sour)___healthy: 0.9882
+[2024-11-28 12:48:36] Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot: 0.9608
+[2024-11-28 12:48:36] Corn_(maize)___Common_rust_: 0.9958
+[2024-11-28 12:48:36] Corn_(maize)___Northern_Leaf_Blight: 0.9289
+[2024-11-28 12:48:36] Corn_(maize)___healthy: 1.0000
+[2024-11-28 12:48:36] Grape___Black_rot: 0.9449
+[2024-11-28 12:48:36] Grape___Esca_(Black_Measles): 0.9819
+[2024-11-28 12:48:36] Grape___Leaf_blight_(Isariopsis_Leaf_Spot): 1.0000
+[2024-11-28 12:48:36] Grape___healthy: 1.0000
+[2024-11-28 12:48:36] Orange___Haunglongbing_(Citrus_greening): 0.9946
+[2024-11-28 12:48:36] Peach___Bacterial_spot: 0.9869
+[2024-11-28 12:48:36] Peach___healthy: 0.7917
+[2024-11-28 12:48:36] Pepper,_bell___Bacterial_spot: 0.8593
+[2024-11-28 12:48:36] Pepper,_bell___healthy: 0.9017
+[2024-11-28 12:48:36] Potato___Early_blight: 1.0000
+[2024-11-28 12:48:36] Potato___Late_blight: 1.0000
+[2024-11-28 12:48:36] Potato___healthy: 0.7667
+[2024-11-28 12:48:36] Raspberry___healthy: 0.9865
+[2024-11-28 12:48:36] Soybean___healthy: 1.0000
+[2024-11-28 12:48:36] Squash___Powdery_mildew: 0.9918
+[2024-11-28 12:48:36] Strawberry___Leaf_scorch: 0.9683
+[2024-11-28 12:48:36] Strawberry___healthy: 0.9451
+[2024-11-28 12:48:36] Tomato___Bacterial_spot: 0.9788
+[2024-11-28 12:48:36] Tomato___Early_blight: 0.9050
+[2024-11-28 12:48:36] Tomato___Late_blight: 0.9606
+[2024-11-28 12:48:36] Tomato___Leaf_Mold: 0.9684
+[2024-11-28 12:48:36] Tomato___Septoria_leaf_spot: 0.9802
+[2024-11-28 12:48:36] Tomato___Spider_mites Two-spotted_spider_mite: 0.9194
+[2024-11-28 12:48:36] Tomato___Target_Spot: 0.6393
+[2024-11-28 12:48:36] Tomato___Tomato_Yellow_Leaf_Curl_Virus: 0.9776
+[2024-11-28 12:48:36] Tomato___Tomato_mosaic_virus: 1.0000
+[2024-11-28 12:48:36] Tomato___healthy: 1.0000
+[2024-11-28 12:48:36] 
+要查看详细的训练可视化，请在命令行运行:
+[2024-11-28 12:48:36] tensorboard --logdir=/home/fries/plant_diseases_recognition/output/logs/20241128-115725
