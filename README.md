@@ -39,12 +39,38 @@ python train.py
 
 The model will be trained on the PlantVillage dataset, and the training output, including logs and model checkpoints, can be found in the `output` folder.
 
+## Evaluating
+
+To evaluate the model, run the following command in the terminal:
+```bash
+python evaluate.py
+```
+
+The model will be trained and evaluated on the PlantVillage dataset, and the training output, including logs and model checkpoints, can be found in the `output` folder.
+
+## Feature maps
+
+If you want to see the feature maps, run the following command in the terminal:
+```bash
+python get_feature_maps.py
+```
+
+You can find the pictures in the `output` folder.
+
+## Gradio Interface
+
+To use the interface, run the following command in the terminal:
+```bash
+python gradio_interface.py
+```
+
 ## Output
 
-After training, you can find the following in the `output` folder:
+After you run the above code, you can find the following in the `output` folder:
 - Checkpoints
-- Training logs
-- Best model
+- Feature maps
+- Logs
+- Best model in the 'models' folder
 - Other Visualizations
 
 ## License

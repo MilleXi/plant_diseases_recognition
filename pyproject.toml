@@ -16,6 +16,7 @@ keras = "^3.6.0"
 opencv-python = "^4.10.0.84"
 matplotlib = "^3.9.2"
 pandas = "^2.2.3"
+gradio = "^5.7.0"
 
 [build-system]
 requires = ["poetry-core"]

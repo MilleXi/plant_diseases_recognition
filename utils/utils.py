@@ -127,35 +127,6 @@ class ModelAnalyzer:
         print(f"非训练参数: {non_trainable_params:,}")
         print(f"模型大小估计: {total_params * 4 / (1024*1024):.2f} MB\n")
 
-    @staticmethod
-    def evaluate_model(model, test_generator, class_names):
-        """
-        评估模型性能
-        :param model: 训练好的模型
-        :param test_generator: 测试数据生成器
-        :param class_names: 类别名称列表
-        :return: 评估报告字典
-        """
-
-        # 获取预测结果
-        predictions = model.predict(test_generator)
-        y_pred = np.argmax(predictions, axis=1)
-        y_true = test_generator.classes
-        
-        # 生成分类报告
-        report = classification_report(y_true, y_pred, 
-                                    target_names=class_names, 
-                                    digits=4)
-        print("\n分类报告:")
-        print(report)
-        
-        return {
-            'predictions': predictions,
-            'y_pred': y_pred,
-            'y_true': y_true,
-            'report': report
-        }
-
 class Logger:
     """日志工具类：用于记录训练过程和结果"""
     

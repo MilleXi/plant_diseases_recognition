@@ -163,3 +163,4 @@ cython_debug/
 
 Plantvillage-Dataset/
 Plant_leave_diseases_dataset_with_augmentation/
+output/
