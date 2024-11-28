@@ -71,8 +71,8 @@ def evaluate():
         # 输出每个类别的精确度、召回率、F1 score
         for i, class_name in enumerate(class_names):
             logger.log(f"Class {class_name}:")
-            logger.log(f"  Precision: {precision[i]:.4f}")
-            logger.log(f"  Recall: {recall[i]:.4f}")
+            logger.log(f"  精确度: {precision[i]:.4f}")
+            logger.log(f"  召回率: {recall[i]:.4f}")
             logger.log(f"  F1 Score: {f1[i]:.4f}")
         
         # 加权平均精确度、召回率、F1 score
@@ -80,9 +80,9 @@ def evaluate():
         weighted_recall = np.average(recall, weights=np.bincount(y_true))
         weighted_f1 = np.average(f1, weights=np.bincount(y_true))
         
-        logger.log(f"\nWeighted Precision: {weighted_precision:.4f}")
-        logger.log(f"Weighted Recall: {weighted_recall:.4f}")
-        logger.log(f"Weighted F1 Score: {weighted_f1:.4f}")
+        logger.log(f"\n加权平均精确度: {weighted_precision:.4f}")
+        logger.log(f"加权召回率: {weighted_recall:.4f}")
+        logger.log(f"加权 F1 Score: {weighted_f1:.4f}")
         
         # 混淆矩阵
         logger.log("[信息] 生成混淆矩阵...")
@@ -93,14 +93,8 @@ def evaluate():
         
         # 总体加权 F1 score
         overall_f1 = f1_score(y_true, y_pred, average='weighted')
-        logger.log(f"Overall Weighted F1 Score: {overall_f1:.4f}")
-        
-        # 绘制训练历史图像（如果有）
-        logger.log("[信息] 绘制训练历史图像...")
-        # 训练历史可以通过模型历史对象获取（如果需要）
-        # history = model.history  # 如果训练时保存了历史对象
-        # Visualizer.plot_training_history(history, 'history_path.png')
-        
+        logger.log(f"总体加权 F1 Score: {overall_f1:.4f}")
+         
     except Exception as e:
         logger.log(f"[错误] 评估过程中出现错误: {str(e)}")
         raise

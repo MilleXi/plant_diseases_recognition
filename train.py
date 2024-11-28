@@ -94,17 +94,6 @@ def train():
         model.save(final_model_path)
         logger.log(f"[信息] 最终模型已保存至: {final_model_path}")
         
-        # 生成混淆矩阵
-        logger.log("[信息] 生成混淆矩阵...")
-        y_true, y_pred, class_names = get_predictions(model, valid_generator)
-        confusion_matrix_path = os.path.join(vis_dir, 'confusion_matrix.png')
-        Visualizer.plot_confusion_matrix(
-            y_true,
-            y_pred,
-            class_names,
-            confusion_matrix_path
-        )
-        logger.log(f"[信息] 混淆矩阵已保存至: {confusion_matrix_path}")
         
         # 保存训练历史
         history_path = os.path.join(vis_dir, 'training_history.png')
@@ -115,14 +104,7 @@ def train():
         logger.log(f"最佳验证准确率: {max(history.history['val_accuracy']):.4f}")
         logger.log(f"最佳训练准确率: {max(history.history['accuracy']):.4f}")
         logger.log(f"最终验证损失: {min(history.history['val_loss']):.4f}")
-        
-        # 计算每个类别的准确率
-        logger.log("\n各类别准确率:")
-        for i, class_name in enumerate(class_names):
-            mask = (y_true == i)
-            class_accuracy = np.mean(y_pred[mask] == y_true[mask])
-            logger.log(f"{class_name}: {class_accuracy:.4f}")
-        
+
         # 提示TensorBoard使用方法
         logger.log("\n要查看详细的训练可视化，请在命令行运行:")
         logger.log(f"tensorboard --logdir={log_dir}")

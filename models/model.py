@@ -124,3 +124,10 @@ class DiseaseClassifier:
         """加载已训练的模型"""
         self.model = tf.keras.models.load_model(model_path)
         return self.model
+    
+    def get_intermediate_model(self, layer_names):
+        """获取一个新的模型，返回中间层的输出"""
+        # 获取中间层的输出
+        layer_outputs = [self.model.get_layer(name).output for name in layer_names]
+        intermediate_model = Model(inputs=self.model.input, outputs=layer_outputs)
+        return intermediate_model

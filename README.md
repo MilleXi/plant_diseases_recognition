@@ -19,7 +19,7 @@ This project aims to develop a model (CNN) for recognizing plant diseases using 
    ```bash
    git clone https://github.com/gabrieldgf4/PlantVillage-Dataset.git
    ```
-   - **Note:** After downloading the dataset, delete the `x_Removed_from_Healthy_leaves` folder inside the `PlantVillage-Dataset` directory.
+   - **Note:** After downloading the dataset, delete the `x_Removed_from_Healthy_leaves` folder and the `.git` folder inside the `PlantVillage-Dataset` directory.
 
 3. Install the required Python dependencies:
    ```bash
